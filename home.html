@@ -319,6 +319,17 @@
         margin: 0 auto;
         gap: 30px;
       }
+      .footer-contact .address {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-contact .address i {
+  font-size: 24px;
+  color: #ffffff; /* ubah sesuai warna tema */
+  margin-top: 4px;
+}
       .footer-links ul {
         list-style: none;
       }
@@ -486,11 +497,18 @@
     <footer>
       <div class="footer-container">
         <div class="footer-contact">
-          <h4>BKPSDM Ciamis</h4>
-          <p>Jl. Sadananya No. 27</p>
-          <p>Kelurahan Maleber</p>
-          <p>Kecamatan Ciamis</p>
-        </div>
+  <h4>BKPSDM Ciamis</h4>
+  <div class="address">
+    <a href="https://maps.app.goo.gl/EWDwFJ5zFucuVRFv7" target="_blank">
+      <i class="fa-solid fa-map-location-dot"></i>
+    </a>
+    <div>
+      <p>Jl. Sadananya No. 27</p>
+      <p>Kelurahan Maleber</p>
+      <p>Kecamatan Ciamis</p>
+    </div>
+  </div>
+</div>
         <div class="footer-links">
           <h4>Link Terkait</h4>
           <ul>
@@ -621,6 +639,7 @@
     </script>
   </body>
 </html>
+
 
 
 
