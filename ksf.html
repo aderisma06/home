@@ -105,116 +105,138 @@
         cursor: pointer;
       }
 
-      /* KSF Styles */
-      .ksf-container {
-        max-width: 1200px;
-        margin: 30px auto;
-        padding: 0 20px;
-      }
-      .ksf-header {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-      .ksf-header h1 {
-        font-size: 32px;
-        color: #6a11cb;
-        margin-bottom: 10px;
-      }
-      .ksf-header p {
-        color: #666;
-        font-size: 18px;
-      }
-      .ksf-tabs {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-bottom: 40px;
-      }
-      .ksf-tab {
-        padding: 15px 30px;
-        background: white;
-        border: 2px solid #6a11cb;
-        border-radius: 50px;
-        font-size: 18px;
-        font-weight: bold;
-        color: #6a11cb;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-      .ksf-tab.active {
-        background: #6a11cb;
-        color: white;
-      }
-      .ksf-tab:hover:not(.active) {
-        background: #f0f0ff;
-      }
-      .ksf-content {
-        background: white;
-        border-radius: 10px;
-        padding: 30px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        min-height: 400px;
-        transition: opacity 0.3s ease;
-      }
-      .ksf-form {
-        display: none;
-        animation: fadeIn 0.5s ease;
-      }
-      .ksf-form.active {
-        display: block;
-      }
-      .form-group {
-        margin-bottom: 20px;
-      }
-      .form-group label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 500;
-        color: #333;
-      }
-      .form-group input,
-      .form-group textarea,
-      .form-group select {
-        width: 100%;
-        padding: 12px 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 14px;
-        transition: border-color 0.3s;
-      }
-      .form-group input:focus,
-      .form-group textarea:focus,
-      .form-group select:focus {
-        border-color: #6a11cb;
-        outline: none;
-        box-shadow: 0 0 0 2px rgba(106, 17, 203, 0.2);
-      }
-      .form-group textarea {
-        min-height: 150px;
-        resize: vertical;
-      }
-      .submit-button {
-        width: 100%;
-        padding: 12px;
-        background: linear-gradient(135deg, #6a11cb, #8e2de2);
-        border: none;
-        border-radius: 5px;
-        color: white;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-      .submit-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
-      }
-      .submit-button:disabled {
-        background: #ccc;
-        cursor: not-allowed;
-        transform: none;
-        box-shadow: none;
-      }
+     /* KSF Styles */
+.ksf-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.ksf-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ksf-header h1 {
+  font-size: 32px;
+  color: #6a11cb;
+  margin-bottom: 10px;
+}
+
+.ksf-header p {
+  color: #666;
+  font-size: 18px;
+}
+
+.ksf-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.ksf-tab {
+  padding: 15px 30px;
+  background: white;
+  border: 2px solid #6a11cb;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #6a11cb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ksf-tab.active {
+  background: #6a11cb;
+  color: white;
+}
+
+.ksf-tab:hover:not(.active) {
+  background: #f0f0ff;
+}
+
+.ksf-content {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+  transition: opacity 0.3s ease;
+}
+
+.ksf-form {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.ksf-form.active {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #6a11cb;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(106, 17, 203, 0.2);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.hidden {
+  display: none;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #6a11cb, #8e2de2);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
+}
+
+.submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
       .login-prompt {
         text-align: center;
         padding: 40px;
@@ -402,40 +424,131 @@
           >
         </div>
 
-        <!-- Konsultasi Form -->
-        <form id="konsultasi-form" class="ksf-form">
-          <div class="form-group">
-            <label for="konsultasi-topik">Topik Konsultasi</label>
-            <select id="konsultasi-topik" name="topik" required>
-              <option value="">Pilih topik konsultasi</option>
-              <option value="pengembangan-kompetensi">
-                Pengembangan Kompetensi
-              </option>
-              <option value="pelatihan">Pelatihan dan Diklat</option>
-              <option value="karier">seminar dan webinar</option>
-              <option value="lainnya">Lainnya</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="konsultasi-pesan">Pertanyaan atau Permasalahan</label>
-            <textarea
-              id="konsultasi-pesan"
-              name="pesan"
-              placeholder="Jelaskan pertanyaan atau permasalahan yang ingin dikonsultasikan"
-              required
-            ></textarea>
-          </div>
-          <div class="form-group">
-            <label for="konsultasi-prioritas">Tingkat Prioritas</label>
-            <select id="konsultasi-prioritas" name="prioritas" required>
-              <option value="">Pilih tingkat prioritas</option>
-              <option value="rendah">Rendah</option>
-              <option value="sedang">Sedang</option>
-              <option value="tinggi">Tinggi</option>
-            </select>
-          </div>
-          <button type="submit" class="submit-button">Kirim Konsultasi</button>
-        </form>
+      <form id="konsultasi-form" class="ksf-form active">
+  <!-- 1. Topik Konsultasi -->
+  <div class="form-group">
+    <label for="konsultasi-topik">Topik Konsultasi</label>
+    <select id="konsultasi-topik" name="topik" required>
+      <option value="">Pilih topik konsultasi</option>
+      <option value="pengembangan-kompetensi">Pengembangan Kompetensi</option>
+      <option value="pelatihan">Pelatihan dan Diklat</option>
+      <option value="karier">Seminar dan Webinar</option>
+      <option value="lainnya">Lainnya</option>
+    </select>
+  </div>
+
+  <div class="form-group hidden" id="topik-lainnya-group">
+    <label for="topik-lainnya">Sebutkan topik lainnya</label>
+    <input
+      type="text"
+      id="topik-lainnya"
+      name="topik_lainnya"
+      placeholder="Tuliskan topik konsultasi lain..."
+    />
+  </div>
+
+  <!-- 2. Alasan Kebutuhan Pelatihan -->
+  <div class="form-group">
+    <label for="alasan-pelatihan">Alasan Kebutuhan Pelatihan</label>
+    <select id="alasan-pelatihan" name="alasan_pelatihan" required>
+      <option value="">Pilih alasan</option>
+      <option value="jabatan-baru">Tuntutan Jabatan Baru</option>
+      <option value="perubahan-regulasi">Perubahan Regulasi</option>
+      <option value="teknologi">Perubahan Teknologi</option>
+      <option value="lainnya">Lainnya</option>
+    </select>
+  </div>
+
+  <div class="form-group hidden" id="alasan-lainnya-group">
+    <label for="alasan-lainnya">Sebutkan alasan lainnya</label>
+    <input
+      type="text"
+      id="alasan-lainnya"
+      name="alasan_lainnya"
+      placeholder="Tuliskan alasan lain..."
+    />
+  </div>
+
+  <!-- 3. Metode Pelatihan -->
+  <div class="form-group">
+    <label for="metode-pelatihan">Metode Pelatihan yang Diinginkan</label>
+    <select id="metode-pelatihan" name="metode_pelatihan" required>
+      <option value="">Pilih metode</option>
+      <option value="tatap-muka">Tatap Muka Kelas</option>
+      <option value="workshop">Workshop / Praktik Lapangan</option>
+      <option value="elearning">E-learning / Daring</option>
+      <option value="coaching">Coaching / Mentoring</option>
+      <option value="lainnya">Lainnya</option>
+    </select>
+  </div>
+
+  <div class="form-group hidden" id="metode-lainnya-group">
+    <label for="metode-lainnya">Sebutkan metode lainnya</label>
+    <input
+      type="text"
+      id="metode-lainnya"
+      name="metode_lainnya"
+      placeholder="Tuliskan metode pelatihan lain..."
+    />
+  </div>
+
+  <!-- 4. Prioritas Waktu -->
+  <div class="form-group">
+    <label for="prioritas-waktu">Prioritas Waktu Pelaksanaan</label>
+    <select id="prioritas-waktu" name="prioritas_waktu" required>
+      <option value="">Pilih waktu</option>
+      <option value="0-3">0 - 3 Bulan</option>
+      <option value="3-6">3 - 6 Bulan</option>
+      <option value=">6">Lebih dari 6 Bulan</option>
+    </select>
+  </div>
+
+  <!-- 5. Dukungan dari Instansi -->
+  <div class="form-group">
+    <label for="dukungan-instansi">Dukungan yang Dibutuhkan dari Instansi</label>
+    <select id="dukungan-instansi" name="dukungan_instansi" required>
+      <option value="">Pilih dukungan</option>
+      <option value="pendanaan">Pendanaan</option>
+      <option value="waktu">Waktu / Izin Belajar</option>
+      <option value="fasilitas">Fasilitas / Sarana</option>
+      <option value="lainnya">Lainnya</option>
+    </select>
+  </div>
+
+  <div class="form-group hidden" id="dukungan-lainnya-group">
+    <label for="dukungan-lainnya">Sebutkan dukungan lainnya</label>
+    <input
+      type="text"
+      id="dukungan-lainnya"
+      name="dukungan_lainnya"
+      placeholder="Tuliskan dukungan lain..."
+    />
+  </div>
+
+  <!-- Pertanyaan atau Permasalahan -->
+  <div class="form-group">
+    <label for="konsultasi-pesan">Pertanyaan atau Permasalahan</label>
+    <textarea
+      id="konsultasi-pesan"
+      name="pesan"
+      placeholder="Jelaskan pertanyaan atau permasalahan yang ingin dikonsultasikan"
+      required
+    ></textarea>
+  </div>
+
+  <!-- Tingkat Prioritas -->
+  <div class="form-group">
+    <label for="konsultasi-prioritas">Tingkat Prioritas</label>
+    <select id="konsultasi-prioritas" name="prioritas" required>
+      <option value="">Pilih tingkat prioritas</option>
+      <option value="rendah">Rendah</option>
+      <option value="sedang">Sedang</option>
+      <option value="tinggi">Tinggi</option>
+    </select>
+  </div>
+
+  <button type="submit" class="submit-button">Kirim Konsultasi</button>
+</form>
 
         <!-- Saran Form -->
         <form id="saran-form" class="ksf-form">
@@ -606,6 +719,28 @@
         });
       }
 
+// Fungsi untuk toggle field "lainnya" secara otomatis
+  function toggleLainnya(selectId, groupId, inputId) {
+    document.getElementById(selectId).addEventListener("change", function () {
+      const group = document.getElementById(groupId);
+      const input = document.getElementById(inputId);
+      if (this.value === "lainnya") {
+        group.classList.remove("hidden");
+        input.setAttribute("required", "required");
+      } else {
+        group.classList.add("hidden");
+        input.removeAttribute("required");
+        input.value = "";
+      }
+    });
+  }
+
+  // Terapkan ke semua select yang punya opsi "Lainnya"
+  toggleLainnya("konsultasi-topik", "topik-lainnya-group", "topik-lainnya");
+  toggleLainnya("alasan-pelatihan", "alasan-lainnya-group", "alasan-lainnya");
+  toggleLainnya("metode-pelatihan", "metode-lainnya-group", "metode-lainnya");
+  toggleLainnya("dukungan-instansi", "dukungan-lainnya-group", "dukungan-lainnya");
+      
       // Form submission - PERBAIKAN: Kirim name dan username
       function setupFormSubmission() {
         const forms = document.querySelectorAll(".ksf-form");
@@ -710,5 +845,6 @@
     </script>
   </body>
 </html>
+
 
 
