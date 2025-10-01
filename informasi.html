@@ -344,20 +344,47 @@
       .footer-links a:hover {
         text-decoration: underline;
       }
-      .social-icons {
-        display: flex;
-        gap: 12px;
-      }
-      .social-icons a {
-        background: white;
-        color: #6a11cb;
-        width: 35px;
-        height: 35px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-      }
+      .footer-logos {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.logo-container img {
+  height: 50px; /* 🔎 diperkecil dari sebelumnya */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    gap: 20px;
+  }
+  .logo-container img {
+    height: 40px; /* lebih kecil di tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    gap: 15px;
+  }
+  .logo-container img {
+    height: 35px; /* lebih kecil di HP */
+  }
+}
+
       .footer-copyright {
         text-align: center;
         margin-top: 20px;
@@ -635,17 +662,15 @@
             <li><a href="#">Sistem Informasi Kepegawaian</a></li>
           </ul>
         </div>
-        <div class="footer-social">
-         
-  <div class="social-container">
+<div class="footer-logos">
+  <div class="logo-container">
     <img src="https://i.ibb.co.com/tMnbFSr5/Lambang-Kabupaten-Ciamis.png" alt="Lambang Kabupaten Ciamis" />
     <img src="https://i.ibb.co.com/JWw8qHmM/logo-bkpsdm.png" alt="Logo BKPSDM Kabupaten Ciamis" />
     <img src="https://i.ibb.co.com/6JvSKyNf/Logo-Ber-AKHLAK-svg.png" alt="Logo BerAKHLAK" />
     <img src="https://i.ibb.co.com/Kcj2rQ2M/pngtree-logo-berakhlak-png-dan-bangga-melayani-bangsa-png-image-8081466.png" alt="Bangga Melayani Bangsa" />
-  
+  </div>
 </div>
 
-        </div>
       </div>
       <div class="footer-copyright">
         <p>Copyright © 2025 PKA BKPSDM Ciamis | All Rights Reserved, v1.0</p>
@@ -744,6 +769,7 @@
     </script>
   </body>
 </html>
+
 
 
 
