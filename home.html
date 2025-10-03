@@ -242,6 +242,84 @@
         font-weight: bold;
         color: #ffeb3b;
       }
+
+      /* ====== KOMPETENSI SECTION ====== */
+      .section-title {
+        text-align: center;
+        font-size: 28px;
+        color: #6a11cb;
+        margin-bottom: 30px;
+        position: relative;
+        padding-bottom: 15px;
+      }
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(to right, #6a11cb, #8e2de2);
+        border-radius: 2px;
+      }
+      .kompetensi-section {
+        padding: 50px 10%;
+        background: #fff;
+        text-align: center;
+      }
+
+      .kompetensi-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .kompetensi-row {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        width: 100%;
+      }
+
+      .kompetensi-box {
+        background: #fdf5ff;
+        border: 2px solid #e2ccff;
+        border-radius: 15px;
+        padding: 30px 15px;
+        text-align: center;
+        text-decoration: none;
+        color: #6a11cb;
+        box-shadow: 0 4px 12px rgba(106, 17, 203, 0.1);
+        transition: all 0.3s ease;
+        width: 180px;
+      }
+
+      .kompetensi-box i {
+        font-size: 36px;
+        margin-bottom: 15px;
+        color: #8e2de2;
+      }
+
+      .kompetensi-box p {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .kompetensi-box:hover {
+        transform: translateY(-6px);
+        background: linear-gradient(135deg, #6a11cb, #8e2de2);
+        color: #fff;
+        box-shadow: 0 6px 16px rgba(106, 17, 203, 0.3);
+      }
+
+      .kompetensi-box:hover i {
+        color: #ffeb3b;
+      }
+
       .about-section {
         padding: 60px 10%;
         background: white;
@@ -320,16 +398,16 @@
         gap: 30px;
       }
       .footer-contact .address {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
 
-.footer-contact .address i {
-  font-size: 24px;
-  color: #ffffff; /* ubah sesuai warna tema */
-  margin-top: 4px;
-}
+      .footer-contact .address i {
+        font-size: 24px;
+        color: #ffffff; /* ubah sesuai warna tema */
+        margin-top: 4px;
+      }
       .footer-links ul {
         list-style: none;
       }
@@ -341,47 +419,46 @@
         text-decoration: underline;
       }
 
-.footer-logos {
-  padding: 20px 0;
-  text-align: center;
-}
+      .footer-logos {
+        padding: 20px 0;
+        text-align: center;
+      }
 
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
 
-.logo-container img {
-  height: 50px; /* 🔎 diperkecil dari sebelumnya */
-  width: auto;
-  transition: transform 0.3s ease;
-}
+      .logo-container img {
+        height: 50px; /* 🔎 diperkecil dari sebelumnya */
+        width: auto;
+        transition: transform 0.3s ease;
+      }
 
-.logo-container img:hover {
-  transform: scale(1.05);
-}
+      .logo-container img:hover {
+        transform: scale(1.05);
+      }
 
-@media (max-width: 768px) {
-  .logo-container {
-    gap: 20px;
-  }
-  .logo-container img {
-    height: 40px; /* lebih kecil di tablet */
-  }
-}
+      @media (max-width: 768px) {
+        .logo-container {
+          gap: 20px;
+        }
+        .logo-container img {
+          height: 40px; /* lebih kecil di tablet */
+        }
+      }
 
-@media (max-width: 480px) {
-  .logo-container {
-    gap: 15px;
-  }
-  .logo-container img {
-    height: 35px; /* lebih kecil di HP */
-  }
-}
-
+      @media (max-width: 480px) {
+        .logo-container {
+          gap: 15px;
+        }
+        .logo-container img {
+          height: 35px; /* lebih kecil di HP */
+        }
+      }
 
       .footer-copyright {
         text-align: center;
@@ -410,6 +487,13 @@
         .header-right {
           flex-wrap: wrap;
           justify-content: center;
+        }
+        /* Responsive untuk kompetensi section */
+        .kompetensi-row {
+          flex-wrap: wrap;
+        }
+        .kompetensi-box {
+          width: 160px;
         }
       }
     </style>
@@ -447,7 +531,6 @@
               <button class="logout-btn" id="logout-btn">Logout</button>
             </div>
           </div>
-
         </div>
       </div>
     </header>
@@ -481,6 +564,44 @@
         </div>
       </div>
     </section>
+    <!-- ====== KOMPETENSI SECTION ====== -->
+    <section class="kompetensi-section">
+      <h2 class="section-title">Informasi</h2>
+      <div class="kompetensi-container">
+        <!-- Baris pertama (3 kotak) -->
+        <div class="kompetensi-row">
+          <a href="#" class="kompetensi-box">
+            <i class="fas fa-user-tie"></i>
+            <p>Kompetensi Manajerial</p>
+          </a>
+          <a href="#" class="kompetensi-box">
+            <i class="fas fa-cogs"></i>
+            <p>Kompetensi Teknis</p>
+          </a>
+          <a href="#" class="kompetensi-box">
+            <i class="fas fa-users"></i>
+            <p>Kompetensi Sosial Kultural</p>
+          </a>
+        </div>
+
+        <!-- Baris kedua (3 kotak) -->
+        <div class="kompetensi-row">
+          <a href="#" class="kompetensi-box">
+            <i class="fas fa-book"></i>
+            <p>SIBANGPECI</p>
+          </a>
+          <a href="#" class="kompetensi-box">
+            <i class="fas fa-chart-bar"></i>
+            <p>Data Asesmen</p>
+          </a>
+          <a href="#" class="kompetensi-box">
+            <i class="fas fa-graduation-cap"></i>
+            <p>Tugas Belajar</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="about-section">
       <div class="about-container">
         <h2 class="about-title">Selayang Pandang</h2>
@@ -526,34 +647,51 @@
     <footer>
       <div class="footer-container">
         <div class="footer-contact">
-  <h4>BKPSDM Ciamis</h4>
-  <div class="address">
-    <a href="https://maps.app.goo.gl/EWDwFJ5zFucuVRFv7" target="_blank">
-      <i class="fa-solid fa-map-location-dot"></i>
-    </a>
-    <div>
-      <p>Jl. Sadananya No. 27</p>
-      <p>Kelurahan Maleber</p>
-      <p>Kecamatan Ciamis</p>
-    </div>
-  </div>
-</div>
+          <h4>BKPSDM Ciamis</h4>
+          <div class="address">
+            <a href="https://maps.app.goo.gl/EWDwFJ5zFucuVRFv7" target="_blank">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </a>
+            <div>
+              <p>Jl. Sadananya No. 27</p>
+              <p>Kelurahan Maleber</p>
+              <p>Kecamatan Ciamis</p>
+            </div>
+          </div>
+        </div>
         <div class="footer-links">
           <h4>Link Terkait</h4>
           <ul>
-            <li><a href="https://bkpsdm.ciamiskab.go.id/">BKPSDM Kabupaten Ciamis</a></li>
-            <li><a href="https://sibangpeci.ciamiskab.go.id/">Si Bang Peci</a></li>
+            <li>
+              <a href="https://bkpsdm.ciamiskab.go.id/"
+                >BKPSDM Kabupaten Ciamis</a
+              >
+            </li>
+            <li>
+              <a href="https://sibangpeci.ciamiskab.go.id/">Si Bang Peci</a>
+            </li>
           </ul>
         </div>
         <div class="footer-logos">
-  <div class="logo-container">
-    <img src="https://i.ibb.co.com/tMnbFSr5/Lambang-Kabupaten-Ciamis.png" alt="Lambang Kabupaten Ciamis" />
-    <img src="https://i.ibb.co.com/JWw8qHmM/logo-bkpsdm.png" alt="Logo BKPSDM Kabupaten Ciamis" />
-    <img src="https://i.ibb.co.com/6JvSKyNf/Logo-Ber-AKHLAK-svg.png" alt="Logo BerAKHLAK" />
-    <img src="https://i.ibb.co.com/99NKJGNg/bangga.png" alt="Bangga Melayani Bangsa" />
-  </div>
-</div>
-
+          <div class="logo-container">
+            <img
+              src="https://i.ibb.co.com/tMnbFSr5/Lambang-Kabupaten-Ciamis.png"
+              alt="Lambang Kabupaten Ciamis"
+            />
+            <img
+              src="https://i.ibb.co.com/JWw8qHmM/logo-bkpsdm.png"
+              alt="Logo BKPSDM Kabupaten Ciamis"
+            />
+            <img
+              src="https://i.ibb.co.com/6JvSKyNf/Logo-Ber-AKHLAK-svg.png"
+              alt="Logo BerAKHLAK"
+            />
+            <img
+              src="https://i.ibb.co.com/99NKJGNg/bangga.png"
+              alt="Bangga Melayani Bangsa"
+            />
+          </div>
+        </div>
       </div>
       <div class="footer-copyright">
         <p>Copyright © 2025 PKA BKPSDM Ciamis | All Rights Reserved, v1.0</p>
@@ -667,11 +805,3 @@
     </script>
   </body>
 </html>
-
-
-
-
-
-
-
-
