@@ -461,10 +461,28 @@
       }
 
       .footer-copyright {
+        padding: 15px 0;
         text-align: center;
-        margin-top: 20px;
         font-size: 14px;
-        opacity: 0.8;
+        margin-top: auto;
+      }
+
+      .copyright {
+        margin: 0;
+        color: #a59f9f;
+        font-size: 14px;
+      }
+
+      .footer-link {
+        color: #2771df; /* Warna biru yang lebih soft */
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .footer-link:hover {
+        color: #1564ca; /* Warna biru yang sedikit lebih gelap saat hover */
+        text-decoration: underline;
       }
       @media (max-width: 900px) {
         .hero-container {
@@ -663,9 +681,7 @@
           <h4>Link Terkait</h4>
           <ul>
             <li>
-              <a href="https://asn.ciamiskab.go.id/home"
-                >ASN Ciamis</a
-              >
+              <a href="https://asn.ciamiskab.go.id/home">ASN Ciamis</a>
             </li>
             <li>
               <a href="https://sibangpeci.ciamiskab.go.id/">Si Bang Peci</a>
@@ -695,10 +711,14 @@
       </div>
       <div class="footer-copyright">
         <p class="copyright">
-    Copyright © 2025 
-    <a href="https://www.pka-bkpsdm-ciamiskab.my.id/home" class="footer-link">PKA BKPSDM Kabupaten Ciamis</a> 
-    | All Rights Reserved, v1.0
-</p>
+          Copyright © 2025
+          <a
+            href="https://www.pka-bkpsdm-ciamiskab.my.id/home"
+            class="footer-link"
+            >PKA BKPSDM Kabupaten Ciamis</a
+          >
+          | All Rights Reserved, v1.0
+        </p>
       </div>
     </footer>
     <script>
@@ -809,10 +829,3 @@
     </script>
   </body>
 </html>
-
-
-
-
-
-
-
