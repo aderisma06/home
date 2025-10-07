@@ -143,13 +143,6 @@
       .logout-btn:hover {
         background: #d81b60;
       }
-      .help-link {
-        background: #ff6b6b;
-        padding: 6px 12px;
-        border-radius: 5px;
-        font-weight: bold;
-        cursor: pointer;
-      }
 
       /* Informasi Section Styles */
       .info-hero {
@@ -195,85 +188,132 @@
         background: rgba(255, 255, 255, 0.3);
       }
 
-      .info-content {
-        padding: 40px 5%;
-        max-width: 1200px;
+      /* Video Section Styles */
+      .video-section {
+        background: white;
+        padding: 60px 5%;
+        text-align: center;
+      }
+
+      .video-container {
+        max-width: 900px;
         margin: 0 auto;
       }
 
-      .info-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        gap: 30px;
-        margin-top: 30px;
-      }
-
-      .info-card {
-        background: white;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-        display: flex;
-        flex-direction: column;
-      }
-      .info-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      }
-
-      .card-icon {
-        height: 120px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(135deg, #6a11cb 0%, #8e2de2 100%);
-        color: white;
-        font-size: 48px;
-      }
-
-      .card-content {
-        padding: 20px;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .card-content h3 {
+      .video-container h2 {
         color: #6a11cb;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        font-size: 32px;
+      }
+
+      .video-container > p {
+        color: #666;
+        margin-bottom: 30px;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .video-embed {
+        margin: 30px 0;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        background: #f8f9fa;
+        padding: 20px;
+      }
+
+      .video-embed iframe {
+        border-radius: 10px;
+        border: none;
+        width: 100%;
+        height: 500px;
+      }
+
+      .video-info {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 25px;
+        border-radius: 10px;
+        margin-top: 25px;
+        text-align: left;
+        border-left: 4px solid #6a11cb;
+      }
+
+      .video-info h3 {
+        color: #6a11cb;
+        margin-bottom: 15px;
         font-size: 20px;
       }
 
-      .card-content p {
-        color: #666;
-        margin-bottom: 15px;
-        line-height: 1.5;
-        flex-grow: 1;
+      .video-info p {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 0;
       }
 
-      .card-meta {
-        display: flex;
-        justify-content: space-between;
-        color: #888;
-        font-size: 14px;
-        margin-bottom: 15px;
-      }
-
-      .card-btn {
-        display: inline-block;
-        background: #6a11cb;
+      /* Buku Panduan Section */
+      .panduan-section {
+        background: linear-gradient(135deg, #2196f3 0%, #21cbf3 100%);
         color: white;
-        padding: 8px 20px;
-        border-radius: 5px;
+        padding: 30px;
+        border-radius: 15px;
+        margin-top: 30px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .panduan-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .panduan-icon {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+
+      .panduan-text h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .panduan-text p {
+        font-size: 16px;
+        opacity: 0.9;
+        margin-bottom: 20px;
+      }
+
+      .panduan-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: white;
+        color: #2196f3;
+        padding: 12px 30px;
+        border-radius: 30px;
         text-decoration: none;
         font-weight: bold;
-        transition: background 0.3s;
-        text-align: center;
-        margin-top: auto;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
       }
-      .card-btn:hover {
-        background: #8e2de2;
+
+      .panduan-btn:hover {
+        background: #f0f0f0;
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .click-counter {
+        margin-top: 15px;
+        font-size: 14px;
+        opacity: 0.8;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 8px 15px;
+        border-radius: 20px;
+        display: inline-block;
       }
 
       .highlight-section {
@@ -324,16 +364,16 @@
         gap: 30px;
       }
       .footer-contact .address {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
 
-.footer-contact .address i {
-  font-size: 24px;
-  color: #ffffff; /* ubah sesuai warna tema */
-  margin-top: 4px;
-}
+      .footer-contact .address i {
+        font-size: 24px;
+        color: #ffffff;
+        margin-top: 4px;
+      }
       .footer-links ul {
         list-style: none;
       }
@@ -345,45 +385,27 @@
         text-decoration: underline;
       }
       .footer-logos {
-  padding: 20px 0;
-  text-align: center;
-}
+        padding: 20px 0;
+        text-align: center;
+      }
 
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
 
-.logo-container img {
-  height: 50px; /* 🔎 diperkecil dari sebelumnya */
-  width: auto;
-  transition: transform 0.3s ease;
-}
+      .logo-container img {
+        height: 50px;
+        width: auto;
+        transition: transform 0.3s ease;
+      }
 
-.logo-container img:hover {
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .logo-container {
-    gap: 20px;
-  }
-  .logo-container img {
-    height: 40px; /* lebih kecil di tablet */
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-container {
-    gap: 15px;
-  }
-  .logo-container img {
-    height: 35px; /* lebih kecil di HP */
-  }
-}
+      .logo-container img:hover {
+        transform: scale(1.05);
+      }
 
       .footer-copyright {
         text-align: center;
@@ -405,8 +427,42 @@
           flex-wrap: wrap;
           justify-content: center;
         }
-        .info-grid {
-          grid-template-columns: 1fr;
+      }
+
+      @media (max-width: 768px) {
+        .logo-container {
+          gap: 20px;
+        }
+        .logo-container img {
+          height: 40px;
+        }
+        .video-embed iframe {
+          height: 300px;
+        }
+        .panduan-section {
+          padding: 20px;
+        }
+        .panduan-text h3 {
+          font-size: 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .logo-container {
+          gap: 15px;
+        }
+        .logo-container img {
+          height: 35px;
+        }
+        .video-embed iframe {
+          height: 250px;
+        }
+        .video-container h2 {
+          font-size: 24px;
+        }
+        .panduan-btn {
+          padding: 10px 20px;
+          font-size: 14px;
         }
       }
     </style>
@@ -426,14 +482,16 @@
             <li><a href="home.html">HOME</a></li>
             <li><a href="ksf.html">KONSULTASI, SARAN, FEEDBACK</a></li>
             <li>
-              <a href="informasi.html" style="text-decoration: underline">INFORMASI</a>
+              <a href="informasi.html" style="text-decoration: underline"
+                >INFORMASI</a
+              >
             </li>
-           
           </ul>
         </nav>
         <div class="header-right">
           <div class="search-container">
-            <input type="text" placeholder="Cari informasi..." /><button>
+            <input type="text" placeholder="Cari informasi..." />
+            <button>
               <i class="fas fa-search"></i>
             </button>
           </div>
@@ -475,157 +533,62 @@
       </div>
     </section>
 
-    <section class="info-content">
-      <div class="info-grid">
-        <!-- Card 1 -->
-        <div class="info-card" data-category="penugasan">
-          <div class="card-icon">
-            <i class="fas fa-user-graduate"></i>
-          </div>
-          <div class="card-content">
-            <h3>Tugas Belajar ASN</h3>
-            <p>
-              Akses seluruh informasi seputar penugasan belajar, panduan, dan
-              prosedur pengajuan untuk meningkatkan kompetensi dan kualifikasi
-              ASN.
-            </p>
-            <div class="card-meta">
-              <span><i class="far fa-calendar"></i> -</span>
-              <span><i class="far fa-eye"></i> 1423</span>
-            </div>
-            <a href="#" class="card-btn">Lihat Detail</a>
-          </div>
+    <!-- Video Section -->
+    <section class="video-section">
+      <div class="video-container">
+        <h2>
+          <i class="fas fa-play-circle"></i> Video Tutorial Penggunaan Website
+          PKA BKPSDM Kabupaten Ciamis
+        </h2>
+        <p>Tonton video informatif tentang tatacara penggunaan website ini</p>
+
+        <div class="video-embed">
+          <!-- Video dari Google Drive -->
+          <iframe
+            src="https://drive.google.com/file/d/1rH5riJiL9LpqTM6XpYmdirmmGROaWRjH/preview"
+            width="100%"
+            height="500"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            title="Video Pengembangan Kompetensi ASN"
+          >
+          </iframe>
         </div>
 
-        <!-- Card 2 -->
-        <div class="info-card" data-category="ebook">
-          <div class="card-icon">
-            <i class="fas fa-book-open"></i>
-          </div>
-          <div class="card-content">
-            <h3>E-Book Assemen Potensi & Kompetensi</h3>
-            <p>
-              Baca dan pelajari e-book yang berisi panduan asesmen potensi serta
-              pengembangan kompetensi ASN untuk meningkatkan profesionalisme.
-            </p>
-            <div class="card-meta">
-              <span><i class="far fa-calendar"></i> -</span>
-              <span><i class="far fa-eye"></i> 1893</span>
-            </div>
-            <a href="#" class="card-btn">Buka e-Book</a>
-          </div>
+        <div class="video-info">
+          <h3><i class="fas fa-info-circle"></i> Tentang Video Ini</h3>
+          <p>
+            Video ini berisi penjelasan lengkap dari mulai penjelasan setiap
+            menu utama yang tersedia, cara melakukan login, hingga pengiriman
+            konsultasi, saran, dan feedback.
+          </p>
         </div>
 
-        <!-- Card 3 -->
-        <div class="info-card" data-category="pelatihan">
-          <div class="card-icon">
-            <i class="fas fa-chalkboard-teacher"></i>
-          </div>
-          <div class="card-content">
-            <h3>Pelatihan Kepemimpinan Tingkat IV</h3>
-            <p>
-              Pendaftaran pelatihan kepemimpinan tingkat IV untuk pejabat
-              struktural eselon IV guna meningkatkan kemampuan manajerial.
-            </p>
-            <div class="card-meta">
-              <span><i class="far fa-calendar"></i> coming soon!</span>
-              <span><i class="far fa-eye"></i> 312</span>
+        <!-- Buku Panduan Section -->
+        <div class="panduan-section">
+          <div class="panduan-content">
+            <div class="panduan-icon">
+              <i class="fas fa-book-open"></i>
             </div>
-            <a href="#" class="card-btn">Coming Soon!</a>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="info-card" data-category="pengumuman">
-          <div class="card-icon">
-            <i class="fas fa-bullhorn"></i>
-          </div>
-          <div class="card-content">
-            <h3>Pengumuman Lebih Lanjut Terkait Pengembangan Kompetensi Aparatur</h3>
-            <p>
-              Pengumuman hasil seleksi kompetensi dasar dan wawasan kebangsaan
-              untuk kenaikan pangkat periode ---.
-            </p>
-            <div class="card-meta">
-              <span><i class="far fa-calendar"></i> -</span>
-              <span><i class="far fa-eye"></i> 567</span>
+            <div class="panduan-text">
+              <h3>Buku Panduan Lengkap</h3>
+              <p>
+                Akses buku panduan online untuk referensi lebih detail tentang
+                penggunaan website PKA BKPSDM
+              </p>
             </div>
-            <a href="#" class="card-btn">Coming Soon!</a>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="info-card" data-category="pelatihan">
-          <div class="card-icon">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <div class="card-content">
-            <h3>Workshop Transformasi Digital ASN</h3>
-            <p>
-              Pelatihan peningkatan kompetensi digital untuk mendukung
-              transformasi pelayanan publik di era digital.
-            </p>
-            <div class="card-meta">
-              <span><i class="far fa-calendar"></i> -</span>
-              <span><i class="far fa-eye"></i> 198</span>
+            <a
+              href="https://online.fliphtml5.com/BukuPanduanWebsite/slxu/"
+              target="_blank"
+              class="panduan-btn"
+              id="panduan-btn"
+            >
+              <i class="fas fa-external-link-alt"></i> Buka Buku Panduan Online
+            </a>
+            <div class="click-counter" id="click-counter">
+              Telah diakses oleh <span id="click-count">0</span> pengguna
             </div>
-            <a href="#" class="card-btn">Coming Soon!</a>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="info-card" data-category="ebook">
-          <div class="card-icon">
-            <i class="fas fa-file-pdf"></i>
-          </div>
-          <div class="card-content">
-            <h3>Kumpulan Materi Pelatihan Teknis</h3>
-            <p>
-              Download materi pelatihan teknis berbagai bidang untuk
-              meningkatkan kompetensi fungsional ASN.
-            </p>
-            <div class="card-meta">
-              <span><i class="far fa-calendar"></i> -</span>
-              <span><i class="far fa-eye"></i> 276</span>
-            </div>
-            <a href="#" class="card-btn">Download</a>
-          </div>
-        </div>
-
-        <!-- Card 7 -->
-        <div class="info-card" data-category="penugasan">
-          <div class="card-icon">
-            <i class="fas fa-passport"></i>
-          </div>
-          <div class="card-content">
-            <h3>Beasiswa Pendidikan Lanjutan</h3>
-            <p>
-              Informasi beasiswa untuk pendidikan S2 dan S3 bagi ASN berprestasi
-              yang ingin melanjutkan studi.
-            </p>
-            <div class="card-meta">
-              <span><i class="far fa-calendar"></i> -</span>
-              <span><i class="far fa-eye"></i> 321</span>
-            </div>
-            <a href="#" class="card-btn">Cooming Soon!</a>
-          </div>
-        </div>
-
-        <!-- Card 8 -->
-        <div class="info-card" data-category="pengumuman">
-          <div class="card-icon">
-            <i class="fas fa-calendar-alt"></i>
-          </div>
-          <div class="card-content">
-            <h3>Informasi lainnya</h3>
-            <p>
-              Akses informasi lainnya terkait dengan pengembangan kompetensi aparatur disini.
-            </p>
-            <div class="card-meta">
-              <span><i class="far fa-calendar"></i> 15 Agu 2025</span>
-              <span><i class="far fa-eye"></i> 432</span>
-            </div>
-            <a href="#" class="card-btn">Coming Soon!</a>
           </div>
         </div>
       </div>
@@ -634,26 +597,27 @@
     <section class="highlight-section">
       <h2>PENDAFTARAN PELATIHAN</h2>
       <p>
-        Segera daftarkan diri Anda untuk mengikuti pelatihan yang diselenggarakan oleh BKPSDM Kabupaten Ciamis. Kuota terbatas!
+        Segera daftarkan diri Anda untuk mengikuti pelatihan yang
+        diselenggarakan oleh BKPSDM Kabupaten Ciamis. Kuota terbatas!
       </p>
-      <a href="#" class="highlight-btn">Coming Soon!</a>
+      <a href="#" class="highlight-btn">Coming Soon</a>
     </section>
 
     <footer>
       <div class="footer-container">
-       <div class="footer-contact">
-  <h4>BKPSDM Ciamis</h4>
-  <div class="address">
-    <a href="https://maps.app.goo.gl/EWDwFJ5zFucuVRFv7" target="_blank">
-      <i class="fa-solid fa-map-location-dot"></i>
-    </a>
-    <div>
-      <p>Jl. Sadananya No. 27</p>
-      <p>Kelurahan Maleber</p>
-      <p>Kecamatan Ciamis</p>
-    </div>
-  </div>
-</div>
+        <div class="footer-contact">
+          <h4>BKPSDM Ciamis</h4>
+          <div class="address">
+            <a href="https://maps.app.goo.gl/EWDwFJ5zFucuVRFv7" target="_blank">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </a>
+            <div>
+              <p>Jl. Sadananya No. 27</p>
+              <p>Kelurahan Maleber</p>
+              <p>Kecamatan Ciamis</p>
+            </div>
+          </div>
+        </div>
         <div class="footer-links">
           <h4>Link Terkait</h4>
           <ul>
@@ -662,15 +626,27 @@
             <li><a href="#">Sistem Informasi Kepegawaian</a></li>
           </ul>
         </div>
-<div class="footer-logos">
-  <div class="logo-container">
-    <img src="https://i.ibb.co.com/tMnbFSr5/Lambang-Kabupaten-Ciamis.png" alt="Lambang Kabupaten Ciamis" />
-    <img src="https://i.ibb.co.com/JWw8qHmM/logo-bkpsdm.png" alt="Logo BKPSDM Kabupaten Ciamis" />
-    <img src="https://i.ibb.co.com/6JvSKyNf/Logo-Ber-AKHLAK-svg.png" alt="Logo BerAKHLAK" />
-    <img src="https://i.ibb.co.com/99NKJGNg/bangga.png" alt="bangga melayani bangsa" border="0">
-  </div>
-</div>
-
+        <div class="footer-logos">
+          <div class="logo-container">
+            <img
+              src="https://i.ibb.co.com/tMnbFSr5/Lambang-Kabupaten-Ciamis.png"
+              alt="Lambang Kabupaten Ciamis"
+            />
+            <img
+              src="https://i.ibb.co.com/JWw8qHmM/logo-bkpsdm.png"
+              alt="Logo BKPSDM Kabupaten Ciamis"
+            />
+            <img
+              src="https://i.ibb.co.com/6JvSKyNf/Logo-Ber-AKHLAK-svg.png"
+              alt="Logo BerAKHLAK"
+            />
+            <img
+              src="https://i.ibb.co.com/99NKJGNg/bangga.png"
+              alt="bangga melayani bangsa"
+              border="0"
+            />
+          </div>
+        </div>
       </div>
       <div class="footer-copyright">
         <p>Copyright © 2025 PKA BKPSDM Ciamis | All Rights Reserved, v1.0</p>
@@ -678,10 +654,9 @@
     </footer>
 
     <script>
-      // Kode untuk filter kategori
+      // Kode untuk filter kategori (dipertahankan untuk navigasi)
       document.addEventListener("DOMContentLoaded", function () {
         const categoryButtons = document.querySelectorAll(".category-btn");
-        const infoCards = document.querySelectorAll(".info-card");
 
         categoryButtons.forEach((button) => {
           button.addEventListener("click", function () {
@@ -690,23 +665,38 @@
             // Tambah class active ke tombol yang diklik
             this.classList.add("active");
 
-            const category = this.getAttribute("data-category");
-
-            // Tampilkan/sembunyikan kartu berdasarkan kategori
-            infoCards.forEach((card) => {
-              if (
-                category === "all" ||
-                card.getAttribute("data-category") === category
-              ) {
-                card.style.display = "flex";
-              } else {
-                card.style.display = "none";
-              }
+            // Scroll ke video section ketika kategori dipilih
+            document.querySelector(".video-section").scrollIntoView({
+              behavior: "smooth",
             });
           });
         });
 
-        // Kode untuk status login (sama seperti di home.html)
+        // Kode untuk tombol buku panduan
+        const panduanBtn = document.getElementById("panduan-btn");
+        const clickCountElement = document.getElementById("click-count");
+
+        // Ambil jumlah klik dari localStorage atau set ke 0
+        let clickCount = localStorage.getItem("panduanClickCount") || 0;
+        clickCountElement.textContent = clickCount;
+
+        // Tambah event listener untuk menghitung klik
+        panduanBtn.addEventListener("click", function () {
+          // Tambah jumlah klik
+          clickCount++;
+          clickCountElement.textContent = clickCount;
+
+          // Simpan ke localStorage
+          localStorage.setItem("panduanClickCount", clickCount);
+
+          // Animasi feedback
+          this.style.transform = "scale(0.95)";
+          setTimeout(() => {
+            this.style.transform = "scale(1)";
+          }, 150);
+        });
+
+        // Kode untuk status login
         function checkLoginStatus() {
           const userDisplay = document.getElementById("user-display");
           const userInfo = document.getElementById("user-info");
@@ -769,12 +759,3 @@
     </script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
